@@ -1,12 +1,18 @@
 package com.tecsup.cloudinaryBACK.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.MapsId;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
-public class Image {
+public class Imagen {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,25 +20,27 @@ public class Image {
     private String name;
     private String imagenUrl;
     private String imagenId;
-    
-    public Image() {
+   
+    public Imagen() {
+    	
     }
 
-    public Image(String name, String imagenUrl, String imagenId) {
-        this.name = name;
+	public Imagen(String name, String imagenUrl, String imagenId) {
+		super();
+		this.name = name;
         this.imagenUrl = imagenUrl;
         this.imagenId = imagenId;
-    }
+	}
 
-    public int getId() {
-        return id;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public String getName() {
         return name;
     }
 

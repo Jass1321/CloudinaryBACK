@@ -14,16 +14,18 @@ public class Producto {
     private String producto;
     private String descripcion;
     private float precio;
+    private String imagenUrl;
     
     public Producto() {
     	
     }
 
-	public Producto(String producto, String descripcion, float precio) {
+	public Producto(String producto, String descripcion, float precio,String imagenUrl) {
 		super();
 		this.producto = producto;
 		this.descripcion = descripcion;
 		this.precio = precio;
+		this.imagenUrl = imagenUrl;
 	}
 
 	public int getId() {
@@ -57,4 +59,15 @@ public class Producto {
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
+
+	public String getImagenUrl() {
+		return imagenUrl;
+	}
+
+	public void setImagenUrl(String imagenUrl) {
+		this.imagenUrl = imagenUrl;
+	}
+	
+	
+
 }
