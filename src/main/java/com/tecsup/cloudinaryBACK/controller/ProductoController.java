@@ -46,6 +46,7 @@ public class ProductoController {
         		productoDto.getProducto(),
         		productoDto.getDescripcion(),
         		productoDto.getPrecio(), 
+        		productoDto.getFechaVencimiento(),
         		productoDto.getImagenUrl() );
         productoService.save(p);
         return new ResponseEntity(new Mensaje("producto creado"), HttpStatus.OK);
@@ -58,6 +59,7 @@ public class ProductoController {
         producto.setProducto(productoDto.getProducto());
         producto.setDescripcion(productoDto.getDescripcion());
         producto.setPrecio(productoDto.getPrecio());
+        producto.setFechaVencimiento(productoDto.getFechaVencimiento());
         producto.setImagenUrl(productoDto.getImagenUrl());
         productoService.save(producto);
         return new ResponseEntity(new Mensaje("producto actualizado"), HttpStatus.OK);
